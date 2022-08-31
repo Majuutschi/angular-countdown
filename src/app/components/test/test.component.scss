@@ -1,0 +1,38 @@
+.test-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+h1, h2 {
+  white-space: nowrap;
+  color: #FFDF5C;
+  font-size: 7vw;
+}
+
+h1 {
+  font-weight: 800;
+}
+
+h2 {
+  font-weight: 400;
+}
+
+.form {
+  padding: 0 2.5rem;
+  
+}
+
+.form input {
+  width: 100%;
+  color: #ffffff;
+  background: transparent;
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+}
