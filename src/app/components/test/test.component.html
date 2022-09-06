@@ -6,7 +6,6 @@
 
   <div class="text-container">
     <h2 class="countdown-timer" [style.font-size]="calculateDateWidth(dateInput.length)">{{ days }} days, {{ hours }}h, {{ minutes }}m, {{ seconds }}s</h2>
-    {{ dateInput }}
   </div>
 
   <div class="form-container">
@@ -28,11 +27,13 @@
     <form class="form" action="">
       <label for="date">Date</label>
       <input 
-        type="number" 
+        type="date" 
         name="date" 
         id="date" 
-        placeholder="YYYY-DD-MM" 
+        placeholder="YYYY-DD-MM"
         [(ngModel)]="dateInput"
+        #date="ngModel"
+        onclick="showPicker()"
       >
     </form>
   </div>

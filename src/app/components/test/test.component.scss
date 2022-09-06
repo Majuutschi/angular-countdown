@@ -55,6 +55,7 @@
       background: transparent;
       padding: 1rem;
       font-size: 1rem;
+      font-family: inherit;
 
       &:focus {
         outline: none;
@@ -64,6 +65,17 @@
         color: #ffffff;
       }
     }
+
+    input[type="date"] {
+      cursor: pointer;
+
+      &::-webkit-calendar-picker-indicator {
+        display: none;
+        -webkit-appearance: none;
+      }
+    }
+      
   }
 }
+
 
