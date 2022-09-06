@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-test',
@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./test.component.scss']
 })
 export class TestComponent implements OnInit {
+
+  public innerWidth: any;
 
   public titleInput: string = 'your event';
 
@@ -20,12 +22,25 @@ export class TestComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.innerWidth = window.innerWidth
   }
 
+  @HostListener('window:resize', ['$event']) 
+  onWindowResize() {
+    this.innerWidth = window.innerWidth
+  }
 
   handleChange() {
     this.days ++;
   }
 
+  calculateTitleWidth(length: any) {
+    console.log(this.innerWidth)
+    return (this.innerWidth * 1.7)/(length+8) +'px'
+  }
+
+  calculateDateWidth(length: any) {
+    return (this.innerWidth * 2.6)/(length+14) +'px'
+  }
 
 }

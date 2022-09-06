@@ -1,11 +1,11 @@
 <div class="test-container">
 
   <div class="text-container">
-    <h1>Time to {{ titleInput }} </h1>
+    <h1 [style.font-size]="calculateTitleWidth(titleInput.length)">Time to {{ titleInput }}</h1>
   </div>
 
   <div class="text-container">
-    <h2 class="countdown-timer">{{ days }} days, {{ hours }}h, {{ minutes }}m, {{ seconds }}s</h2>
+    <h2 class="countdown-timer" [style.font-size]="calculateDateWidth(dateInput.length)">{{ days }} days, {{ hours }}h, {{ minutes }}m, {{ seconds }}s</h2>
     {{ dateInput }}
   </div>
 
