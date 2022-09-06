@@ -34,6 +34,7 @@
         [(ngModel)]="dateInput"
         #date="ngModel"
         onclick="showPicker()"
+        (change)="myCountdown()"
       >
     </form>
   </div>
