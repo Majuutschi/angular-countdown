@@ -9,34 +9,34 @@
   </div>
 
   <div class="form-container">
-    <form class="form" action="">
-      <label for="title">Title</label>
-      <input 
-        type="text" 
-        name="title" 
-        id="title" 
-        placeholder="Type your event name here"
-        [(ngModel)]="titleInput"
-        #title="ngModel"
-      >
-    </form>
-  </div>
-  
-
-  <div class="form-container">
-    <form class="form" action="">
-      <label for="date">Date</label>
-      <input 
-        type="date" 
-        name="date" 
-        id="date" 
-        min={{currentDate}}
-        placeholder="YYYY-DD-MM"
-        [(ngModel)]="dateInput"
-        #date="ngModel"
-        onclick="showPicker()"
-        (change)="startCountdown()"
-      >
+    <form class="form">
+      <div class="input-container">
+        <label for="title">Title</label>
+        <input 
+          type="text" 
+          name="title" 
+          id="title" 
+          placeholder="Type your event name here"
+          [(ngModel)]="titleInput"
+          #title="ngModel"
+        >
+      </div>
+      
+      <div class="input-container">
+        <label for="date">Date</label>
+        <input 
+          type="date" 
+          name="date" 
+          id="date" 
+          min={{currentDate}}
+          placeholder="YYYY-DD-MM"
+          [(ngModel)]="dateInput"
+          #date="ngModel"
+          onclick="showPicker()"
+          (change)="startCountdown()"
+        >
+      </div>
+      
     </form>
   </div>
   
