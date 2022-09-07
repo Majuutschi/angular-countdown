@@ -30,11 +30,12 @@
         type="date" 
         name="date" 
         id="date" 
+        min={{currentDate}}
         placeholder="YYYY-DD-MM"
         [(ngModel)]="dateInput"
         #date="ngModel"
         onclick="showPicker()"
-        (change)="myCountdown()"
+        (change)="startCountdown()"
       >
     </form>
   </div>
