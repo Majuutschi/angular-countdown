@@ -1,4 +1,5 @@
 # Angular Countdown
+## A countdown page made with Angular. The text width is supposed to adjust if the text grows or get smaller.
 
 ### `ng serve`
 
